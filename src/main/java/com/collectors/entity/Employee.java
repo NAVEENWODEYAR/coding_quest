@@ -30,5 +30,14 @@ public class Employee extends AbstractEntity {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "EMP_ID")
 	private Long empId;
+	
+	@Column(name = "FIRST_NAME")
+	private String firstName;
+	
+	@Column(name = "LAST_NAME")
+	private String lastName;
+	
+	@Column(name = "EMP_MAIL")
+	private String email;
 
 }
