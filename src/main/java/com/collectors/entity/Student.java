@@ -2,9 +2,7 @@
 package com.collectors.entity;
 
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 /**
  * @author Naveen K Wodeyar
@@ -20,5 +18,13 @@ public class Student {
 
 	@Id
 	public Long stId;
+	
+	private String stName;
+	
+	private String stClass;
+	
+	private String stGrade;
+	
+	private String stMail;
 
 }
