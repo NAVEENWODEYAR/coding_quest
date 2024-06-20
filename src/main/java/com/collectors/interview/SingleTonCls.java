@@ -1,0 +1,24 @@
+package com.collectors.interview;
+
+public class SingleTonCls {
+
+	private static SingleTonCls instance = null;
+	
+	private SingleTonCls() {}
+	
+	public synchronized static SingleTonCls getInstance() {
+		if(instance == null) {
+			instance = new SingleTonCls();
+		}
+		return instance;
+	}
+	
+	
+	public static void main(String[] args) {
+		SingleTonCls s1 = SingleTonCls.getInstance();
+		SingleTonCls s2 = SingleTonCls.getInstance();
+		
+		System.out.println(s1.hashCode()+"="+s2.hashCode());
+	}
+
+}
