@@ -10,6 +10,9 @@ public class SingleTonCls {
 		if(instance == null) {
 			instance = new SingleTonCls();
 		}
+		else{
+			return null;
+		}
 		return instance;
 	}
 	
