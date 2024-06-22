@@ -8,6 +8,6 @@ public class CodingQuestApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CodingQuestApplication.class, args);
+		System.out.println("\n*********\n");
 	}
-
 }
