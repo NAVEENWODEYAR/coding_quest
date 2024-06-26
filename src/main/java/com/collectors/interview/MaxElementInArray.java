@@ -5,7 +5,6 @@ import java.util.*;
 public class MaxElementInArray {
 
 	static int maxElement(int[] arr) {
-		
 		int max=0;
 		for(int i:arr) {
 			if(i > max) {
