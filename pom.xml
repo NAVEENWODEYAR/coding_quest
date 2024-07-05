@@ -80,7 +80,11 @@
 	</dependencies>
 
 	<build>
+<<<<<<< HEAD
 		<finalName>Coding_Quest.jar</finalName>
+=======
+		<finalName>Coding_Quest</finalName>
+>>>>>>> working
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
