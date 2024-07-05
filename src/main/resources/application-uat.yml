@@ -4,7 +4,7 @@ server:
   
 spring:
   application:
-    name: CODE
+    name: UAT ENVIRONMENT
   security:
     user:
       name: rest

@@ -4,9 +4,11 @@ import java.util.*;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import com.collectors.entity.Student;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("/student")
+@Slf4j
 public class StudentController {
 	
 	Map<Long,Student> hm = new HashMap<>();
@@ -27,9 +29,10 @@ public class StudentController {
 		return ResponseEntity.status(HttpStatus.FOUND).body(hm);
 	}
 	
-	@GetMapping("/get-byId")
+	@GetMapping("/get-byId/{studentId}")
 	public ResponseEntity<?> getStudentById(@PathVariable Long studentId){
-		return new ResponseEntity(hm,HttpStatus.FOUND);
+		log.warn("GetById "+studentId);
+		return new ResponseEntity(hm.get(studentId),HttpStatus.FOUND);
 	}
 	
 }

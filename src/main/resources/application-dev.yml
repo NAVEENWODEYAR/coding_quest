@@ -3,11 +3,15 @@ server:
   port: 7777
   
 spring:
+  security:
+    user:
+      name: dev
+      password: dev
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/sbdb?createDatabaseIfNotExist=true
-    username: ${Database}
-    password: ${Password}
+    username: root
+    password: boss
   jpa:
     database: mysql
     show-sql: true
