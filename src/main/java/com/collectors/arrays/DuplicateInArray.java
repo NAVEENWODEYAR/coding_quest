@@ -1,15 +1,11 @@
 package com.collectors.arrays;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
+import java.util.*;
+import java.util.stream.*;
 /**
  * @author Naveen K Wodeyar
  * @date 08-Jul-2024
- * @apiNote program to remove the duplicate elements in array,
+ * @apiNote program to remove the duplicate elements in array.
  */
 public class DuplicateInArray {
 
