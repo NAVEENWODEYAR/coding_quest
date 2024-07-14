@@ -14,9 +14,14 @@ public class DuplicateInArray {
 		return set;
 	}
 	
+	static void removeDuplicatesJ8(int[]arr) {
+		int[] array = Arrays.stream(arr).distinct().toArray();
+		System.out.println("\nOriginal array-"+Arrays.toString(arr)+"\nDistinct array-"+Arrays.toString(array));
+	}
 	public static void main(String[] args) {
 		Integer[] arr = {1,2,3,4,5,6,5,4,3,7,8,9};
 		removeDuplicates(arr);
+		removeDuplicatesJ8(new int[] {1,2,3,4,2,5,6,4,6,7,6,8,9});
 
 	}
 

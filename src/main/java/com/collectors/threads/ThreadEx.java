@@ -1,5 +1,8 @@
 package com.collectors.threads;
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 import lombok.SneakyThrows;
 
 /**
@@ -7,8 +10,13 @@ import lombok.SneakyThrows;
  * @date 11-Jul-2024
  */
 public class ThreadEx extends Thread {
+	
+	private static Lock lock = new ReentrantLock();
 
 	public void run() {
+		lock.lock();
+		Thread.currentThread();
+		System.out.println(Thread.holdsLock(lock));
 		System.out.println(Thread.currentThread().getName()+"\n");
 	}
 	
