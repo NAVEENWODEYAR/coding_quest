@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class NthNonRepeatingElement {
 
 	// using for loop,
-	static Integer nonRepatingElement(int[] arr) {
+	public static Integer nonRepatingElement(int[] arr) {
 		Map<Integer, Integer> hashMap = new HashMap<>();
 		int nonRepeat = 0;
 		for(int num:arr) {
@@ -34,7 +34,7 @@ public class NthNonRepeatingElement {
 
 	}
 	
-	static Integer nonRepeatingNumber(int arr[]) {
+	public static Integer nonRepeatingNumber(int arr[]) {
 		Map<Integer, Long> collect = Arrays.stream(arr).boxed().collect(Collectors.groupingBy(n->n,Collectors.counting()));
 		List<Integer> list = Arrays.stream(arr).boxed().filter(n->collect.get(n)==1).distinct().toList();
 		return list.size() > 1 ?list.get(1) :null;
