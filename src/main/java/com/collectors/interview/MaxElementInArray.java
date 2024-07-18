@@ -1,5 +1,8 @@
 package com.collectors.interview;
-
+/**
+ * @author Naveen K Wodeyar
+ * @date 18/07/2024
+ */
 import java.util.*;
 
 public class MaxElementInArray {

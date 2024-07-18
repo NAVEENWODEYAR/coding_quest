@@ -1,5 +1,8 @@
 package com.collectors.interview;
-
+/**
+ * @author Naveen K Wodeyar
+ * @date 18/07/2024
+ */
 public class SingleTonCls {
 
 	private static SingleTonCls instance = null;
