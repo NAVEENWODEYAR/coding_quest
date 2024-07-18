@@ -1,4 +1,3 @@
-
 package com.collectors.entity;
 
 import jakarta.persistence.Id;
@@ -7,7 +6,7 @@ import lombok.*;
 /**
  * @author Naveen K Wodeyar
  * @date 07/06/2024
- *
+ * @apiNote
  */
 @Data
 @AllArgsConstructor
