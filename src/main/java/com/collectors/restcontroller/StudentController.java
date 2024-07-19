@@ -15,6 +15,7 @@ public class StudentController {
 	
 	@GetMapping("/test")
 	public ResponseEntity<?> testEndPoint(){
+		log.warn("test endPoint");
 		return new ResponseEntity<>("Welcome!", HttpStatus.FOUND);
 	}
 	
