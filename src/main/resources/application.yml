@@ -1,4 +1,6 @@
 
 spring:
   profiles:
-    active: dev
+    active: sit2
+  application:
+    name: CODING_QUEST

@@ -1,22 +1,30 @@
 package com.collectors.restcontroller;
 
 import java.util.*;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import com.collectors.entity.Student;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
-@RequestMapping("/student")
+@RequestMapping("/api/v1/student")
 @Slf4j
 public class StudentController {
 	
+	public static final Logger log = LoggerFactory.getLogger(StudentController.class);
+	
 	Map<Long,Student> hm = new HashMap<>();
 	
-	@GetMapping("/test")
-	public ResponseEntity<?> testEndPoint(){
-		log.warn("test endPoint");
-		return new ResponseEntity<>("Welcome!", HttpStatus.FOUND);
+	@GetMapping("/test/{name}")
+	public ResponseEntity<?> testEndPoint(@PathVariable String name){
+		log.warn("Inside test endPoint");
+		log.debug("Request {}",name);
+		log.trace("Name {}",name);
+		log.error("Test endPoint,");
+		return new ResponseEntity<>("Welcome "+name, HttpStatus.FOUND);
 	}
 	
 	@PostMapping
