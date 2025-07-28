@@ -30,7 +30,7 @@ public class StudentController {
 	@PostMapping
 	public ResponseEntity<Object> addStudent(@RequestBody Student request){
 		hm.put(request.getStId(), request);
-		return ResponseEntity.status(HttpStatus.CREATED).body("Student added successfully!");
+		return ResponseEntity.status(HttpStatus.CREATED).body("Student record added successfully!");
 	}
 	
 	@GetMapping
@@ -40,7 +40,7 @@ public class StudentController {
 	
 	@GetMapping("/get-byId/{studentId}")
 	public ResponseEntity<?> getStudentById(@PathVariable Long studentId){
-		log.warn("GetById "+studentId);
+		log.warn("Student found GetById "+studentId);
 		return new ResponseEntity(hm.get(studentId),HttpStatus.FOUND);
 	}
 	
