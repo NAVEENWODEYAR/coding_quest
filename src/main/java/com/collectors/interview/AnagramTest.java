@@ -46,7 +46,7 @@ public class AnagramTest {
 	public static void main(String[] args) {
 		System.out.println(anagramTest("silenT", "Listen")?"Anagrams":"Not anagrams");
 		System.out.println(anagramTestJ8("the classroom", "school master")?"Anagrams":"Not anagrams");
-		System.out.println(anagramTestLoop("the classroom", "school master")?"Anagrams":"Not anagrams");
+		System.out.println(anagramTestLoop("the classroom", "school master")?"Given strings are Anagrams":"Not anagrams");
 	}
 
 }
