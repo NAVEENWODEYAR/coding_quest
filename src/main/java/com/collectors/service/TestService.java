@@ -16,7 +16,7 @@ public class TestService {
 	RestTemplate restTemplate = new RestTemplate();
 	
 	public Object getProducts() {
-		log.info("RestTemplate");
+		log.info("RestTemplate demo method");
 		return restTemplate.getForObject("https://dummyjson.com/products", Object.class);
 	}
 }
