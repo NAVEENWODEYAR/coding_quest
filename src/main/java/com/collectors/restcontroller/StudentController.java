@@ -40,7 +40,7 @@ public class StudentController {
 	
 	@GetMapping("/get-byId/{studentId}")
 	public ResponseEntity<?> getStudentById(@PathVariable Long studentId){
-		log.warn("Student found GetById "+studentId);
+		log.warn("Student record found with Id "+studentId);
 		return new ResponseEntity(hm.get(studentId),HttpStatus.FOUND);
 	}
 	
