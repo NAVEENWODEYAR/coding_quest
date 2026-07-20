@@ -10,6 +10,7 @@ import java.util.stream.*;
 public class DuplicateInArray {
 
 	public static Set removeDuplicates(Integer[] arr) {
+System.out.println("Using Set to remove duplicate in Array");
 		Set<Integer> set = Arrays.stream(arr).collect(Collectors.toSet());
 		return set;
 	}
