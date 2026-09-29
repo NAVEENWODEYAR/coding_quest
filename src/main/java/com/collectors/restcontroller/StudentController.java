@@ -30,7 +30,7 @@ public class StudentController {
 	@PostMapping
 	public ResponseEntity<Object> addStudent(@RequestBody Student request){
 		hm.put(request.getStId(), request);
-		return ResponseEntity.status(HttpStatus.CREATED).body("Student record added successfully!");
+		return ResponseEntity.status(HttpStatus.CREATED).body("Student record added/persisted successfully!");
 	}
 	
 	@GetMapping
