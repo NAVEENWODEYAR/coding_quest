@@ -9,7 +9,7 @@ import lombok.SneakyThrows;
 public class DaemonThreadEx {
 
 	public static void main(String[] args) {
-System.out.println("Runnable Thread");
+System.out.println("Runnable thread program");
 		Runnable runnable = ()->{
 			for (int i = 0; i < Thread.NORM_PRIORITY; i++) {
 				System.out.println(Thread.currentThread().getName()+"~"+i);
